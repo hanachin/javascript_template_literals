@@ -1,9 +1,15 @@
-RSpec.describe JavascriptTemplateLiterals do
-  it "has a version number" do
-    expect(JavascriptTemplateLiterals::VERSION).not_to be nil
-  end
+using JavascriptTemplateLiterals
 
-  it "does something useful" do
-    expect(false).to eq(true)
+RSpec.describe JavascriptTemplateLiterals do
+  it "interpolate expression" do
+    a = 5
+    b = 10
+    expect {
+puts(`Fifteen is ${a + b} and
+not ${2 * a + b}.`)
+    }.to output(<<~EOS).to_stdout
+    Fifteen is 15 and
+    not 20.
+    EOS
   end
 end

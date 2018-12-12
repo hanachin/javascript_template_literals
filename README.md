@@ -1,8 +1,6 @@
 # JavascriptTemplateLiterals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/javascript_template_literals`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Make #\`(string) works like JavaScript Template literals
 
 ## Installation
 
@@ -22,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```rb
+a = 5
+b = 10
+puts(`Fifteen is ${a + b} and
+not ${2 * a + b}.`)
+```
 
 ## Development
 
@@ -32,4 +35,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/javascript_template_literals.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hanachin/javascript_template_literals.
