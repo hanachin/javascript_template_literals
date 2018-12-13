@@ -1,6 +1,6 @@
-using JavascriptTemplateLiterals
+using JavaScriptTemplateLiterals
 
-RSpec.describe JavascriptTemplateLiterals do
+RSpec.describe JavaScriptTemplateLiterals do
   it "interpolate expression" do
     a = 5
     b = 10

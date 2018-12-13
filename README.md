@@ -1,4 +1,4 @@
-# JavascriptTemplateLiterals
+# JavaScriptTemplateLiterals
 
 Make #\`(string) works like JavaScript Template literals
 

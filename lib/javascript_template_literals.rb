@@ -1,7 +1,7 @@
 require "javascript_template_literals/version"
 require "binding_of_caller"
 
-module JavascriptTemplateLiterals
+module JavaScriptTemplateLiterals
   class Error < StandardError; end
 
   def self.interpolate(b, str)
@@ -23,9 +23,9 @@ module JavascriptTemplateLiterals
   refine(Object) do
     def `(str)
       b = binding.of_caller(1)
-      JavascriptTemplateLiterals.interpolate(b, str).tap do |ret|
+      JavaScriptTemplateLiterals.interpolate(b, str).tap do |ret|
         ret.define_singleton_method(:to_ary) do
-          JavascriptTemplateLiterals.template_arguments(b, str)
+          JavaScriptTemplateLiterals.template_arguments(b, str)
         end
       end
     end

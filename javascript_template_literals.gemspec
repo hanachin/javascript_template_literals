@@ -5,7 +5,7 @@ require "javascript_template_literals/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "javascript_template_literals"
-  spec.version       = JavascriptTemplateLiterals::VERSION
+  spec.version       = JavaScriptTemplateLiterals::VERSION
   spec.authors       = ["Seiei Miyagi"]
   spec.email         = ["hanachin@gmail.com"]
 
