@@ -21,10 +21,34 @@ Or install it yourself as:
 ## Usage
 
 ```rb
+require "javascript_template_literals"
+
+using JavaScriptTemplateLiterals
+
 a = 5
 b = 10
-puts(`Fifteen is ${a + b} and
-not ${2 * a + b}.`)
+puts `Fifteen is ${a + b} and
+not ${2 * a + b}.`
+# Fifteen is 15 and
+# not 20.
+
+def my_tag((strings, person_exp, age_exp))
+  str0 = strings[0]
+  str1 = strings[1]
+
+  if age_exp > 99
+    age_str = "centenarian"
+  else
+    age_str = "youngster"
+  end
+
+  `${str0}${person_exp}${str1}${age_str}`
+end
+
+person = "Mike"
+age = 28
+puts my_tag`That ${ person } is a ${ age }`
+# That Mike is a youngster
 ```
 
 ## Development
